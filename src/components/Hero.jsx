@@ -193,8 +193,8 @@ const Hero = () => {
         </div>
 
         <div className="diamond-layer">
-          <img src={image1} alt="Diamond Left" className="side-img" />
-          <img src={image2} alt="Diamond Center" className="center-img" />
+          <img src={image2} alt="Diamond Left" className="side-img" />
+          <img src={image1} alt="Diamond Center" className="center-img" />
           <img src={image3} alt="Diamond Right" className="side-img" />
         </div>
       </div>
