@@ -183,16 +183,11 @@ const Hero = () => {
   
   
   
- return (
+  return (
     <>
-      <section
-        className="hero"
-        ref={heroRef}
-        style={{ backgroundImage: `url(${bg})` }}
-      >
+      <div className="hero" ref={heroRef}>
         <Navbar />
         <div className="overlay"></div>
-
         <div className="hero-content">
           <h1>DIAMONDS</h1>
         </div>
@@ -202,9 +197,9 @@ const Hero = () => {
           <img src={image2} alt="Diamond Center" className="center-img" />
           <img src={image3} alt="Diamond Right" className="side-img" />
         </div>
-      </section>
+      </div>
 
-      <section className="section1">
+      <div className="section1">
         <div className="section1-container">
           <div className="section1-left">
             <img src={section1} alt="Elegance Jewellery" />
@@ -212,24 +207,30 @@ const Hero = () => {
           <div className="section1-right">
             <h1>Crafted to Captivate</h1>
             <p>
-              Crafted with precision and passion, every diamond tells a story of
-              timeless beauty and refined luxury.
+              Crafted with precision and passion, every diamond tells a story
+              of timeless beauty and refined luxury. Our designs are inspired
+              by grace, confidence, and the brilliance that defines you.
+              Each piece reflects sophistication, created to be cherished
+              today and admired forever.
             </p>
             <button className="luxury-btn">Explore Collection</button>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="section2">
+      <div className="section2">
         <div className="section2-container">
           <h1>Unapologetically Brilliant</h1>
           <p>
-            Designed for those who embrace confidence and timeless glamour.
+            Designed for those who embrace confidence and timeless glamour,
+            every creation reflects passion, precision, and prestige.
+            Our diamonds are more than jewellery — they are statements
+            of strength, elegance, and individuality. Shine without limits.
           </p>
           <img src={section2} alt="Luxury Diamond Collection" />
           <button className="luxury-btn">Get it Now</button>
         </div>
-      </section>
+      </div>
     </>
   );
 };
