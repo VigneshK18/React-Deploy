@@ -5,6 +5,13 @@ import Navbar from "./Navbar";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import bg from "../assets/bg.png";
+import image1 from "../assets/image1.png";
+import image2 from "../assets/image2.png";
+import image3 from "../assets/image3.png";
+import section1 from "../assets/section1.png";
+import section2 from "../assets/section2.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
@@ -176,54 +183,53 @@ const Hero = () => {
   
   
   
-  return (
+ return (
     <>
-      <div className="hero" ref={heroRef}>
+      <section
+        className="hero"
+        ref={heroRef}
+        style={{ backgroundImage: `url(${bg})` }}
+      >
         <Navbar />
         <div className="overlay"></div>
+
         <div className="hero-content">
           <h1>DIAMONDS</h1>
         </div>
 
         <div className="diamond-layer">
-          <img src="/images/image2.png" alt="Diamond Left"   className="side-img" />
-          <img src="/images/image1.png" alt="Diamond Center" className="center-img" />
-          <img src="/images/image3.png" alt="Diamond Right"  className="side-img" />
+          <img src={image1} alt="Diamond Left" className="side-img" />
+          <img src={image2} alt="Diamond Center" className="center-img" />
+          <img src={image3} alt="Diamond Right" className="side-img" />
         </div>
-      </div>
+      </section>
 
-      <div className="section1">
+      <section className="section1">
         <div className="section1-container">
           <div className="section1-left">
-            <img src="/images/section1.png" alt="Elegance Jewellery" />
+            <img src={section1} alt="Elegance Jewellery" />
           </div>
           <div className="section1-right">
             <h1>Crafted to Captivate</h1>
             <p>
-              Crafted with precision and passion, every diamond tells a story
-              of timeless beauty and refined luxury. Our designs are inspired
-              by grace, confidence, and the brilliance that defines you.
-              Each piece reflects sophistication, created to be cherished
-              today and admired forever.
+              Crafted with precision and passion, every diamond tells a story of
+              timeless beauty and refined luxury.
             </p>
             <button className="luxury-btn">Explore Collection</button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="section2">
+      <section className="section2">
         <div className="section2-container">
           <h1>Unapologetically Brilliant</h1>
           <p>
-            Designed for those who embrace confidence and timeless glamour,
-            every creation reflects passion, precision, and prestige.
-            Our diamonds are more than jewellery — they are statements
-            of strength, elegance, and individuality. Shine without limits.
+            Designed for those who embrace confidence and timeless glamour.
           </p>
-          <img src="/images/section2.png" alt="Luxury Diamond Collection" />
+          <img src={section2} alt="Luxury Diamond Collection" />
           <button className="luxury-btn">Get it Now</button>
         </div>
-      </div>
+      </section>
     </>
   );
 };
